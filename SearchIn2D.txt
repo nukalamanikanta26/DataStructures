@@ -1,0 +1,43 @@
+LinearSearch Example Program3.
+
+Given an array nums of integers, return how many of them contain an even number of digits.
+
+Example 1:
+
+Input: nums = [12,345,2,6,7896]
+Output: 2
+
+CODE:
+
+public class EvenNoOfDigits {
+    public static void main(String[] args) {
+                int[] nums = {12, 354, 3, 5, 6243};
+                System.out.println(findNumber(nums));
+            }
+            static int findNumber(int[] nums) {
+                int count = 0;
+                for (int num : nums) {
+                    if (hasEvenDigits(num)) {
+                        count++;
+                    }
+                }
+                return count;
+            }
+    // function for the checking even number
+            static boolean hasEvenDigits(int num) {
+                int numberOfDigits = countDigits(num);
+                return numberOfDigits % 2 == 0;
+            }
+            // count for number of digits
+            static int countDigits(int num) {
+                if (num == 0) return 1;
+                int count = 0;
+                while (num != 0) {
+                    count++;
+                    num /= 10;
+                }
+                return count;
+            }
+        }
+
+output: 2

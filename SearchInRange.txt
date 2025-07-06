@@ -1,0 +1,27 @@
+LinearSearch Example Program3.
+
+Finding min value from the array using linear search by updating values
+
+CODE:
+
+public class Findmin {
+    public static void main(String[] args) {
+        int[] arr ={ 18, 2 , 3, -7, 14, 19};
+        System.out.println(min(arr));
+    }
+
+    // assume this arr[] != 0
+    // return min value
+    static int min(int[] arr) {
+        int ans = arr[0];
+        for (int i = 1; i < arr.length ; i++) {
+            if(arr[i] < ans) {
+                ans = arr[i];
+            }
+        }
+        return ans;
+    }
+}
+
+
+output: -7

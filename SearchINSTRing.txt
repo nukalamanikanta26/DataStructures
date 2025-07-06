@@ -1,0 +1,25 @@
+LinearSearch Example Program2.
+
+Searching for a number in an array, with in range with indexes start , end
+CODE:
+
+public class SearchInRange {
+    public static void main(String[] args) {
+      int[] arr = {18,12,-7,3,4,23};
+      int target = 3;
+      System.out.println(LinearSearch(arr,target,1,4));
+    }
+    static int LinearSearch(int[] arr, int target,int start, int end){
+        if(arr.length == 0){
+            return -1;
+        }
+        for (int i = start; i < end ; i++) {
+            int element = arr[i];
+            if(element==target) {
+                return i;
+            }
+        }
+        return -1;
+    }
+}
+output: 3
