@@ -1,0 +1,26 @@
+LinearSearch Example Program5.
+
+
+Example 1:
+
+Input: nums = [12,345,2,6,7896]
+Output: 2
+
+CODE:
+
+public class MaxWealth {
+    public int maximumWealth(int[][] accounts) {
+        int ans = Integer.MIN_VALUE;
+        for (int person = 0; person < accounts; person++) {
+            int sum =0;
+            for (int account = 0; account < accounts[person].length; account++) {
+                sum += accounts[person][account];
+            }
+        if(sum > ans){
+            ans = sum;
+        }
+        }
+        return ans;
+    }
+}
+output: 6
