@@ -1,0 +1,32 @@
+import java.util.Arrays;
+
+public class Sort {
+    public static void main(String[] args) {
+   int[] arr = {1,4,6,8,11,3,21,43,54,65,56,43,21,44,5,12};
+   sorting(arr);
+        System.out.println(Arrays.toString(arr));
+
+    }
+    public  static  void sorting(int[] num){
+        //Move upto no of elements
+        boolean swapped;
+        for (int i = 0; i < num.length; i++) {
+            swapped = false;
+            //for every step max item returns to respective last index
+            for(int j = 1; j <= num.length-i-1; j++) {
+                //swap if item smaller than previous element.
+                if(num[j]<num[j-1]){
+                    //swap
+                    int temp = num[j];
+                    num[j] = num[j-1];
+                    num[j-1] = temp;
+                    swapped = true;
+
+                }
+            }
+            if(!swapped){
+                break;
+            }
+        }
+    }
+}
